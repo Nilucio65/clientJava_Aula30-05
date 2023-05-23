@@ -19,11 +19,16 @@ public class ClientController {
 
     @GetMapping("clients")
     public List<Client> getClients(){
+        String[] names = {"Luiz", "Maria", "José", "Stefanio", "Marcio", "Louiz", "Gustavo"};
+
         List<Client> clients = new ArrayList<Client>();
-        Client client1 = new Client(1, "Luiz", "luiz@gmail.com");
-        Client client2 = new Client(2, "Maria", "maria@gmail.com");
-        clients.add(client1);
-        clients.add(client2);
+        int i = 0;
+        for(String name: names){
+
+            Client obj = new Client(i, name, name + "@gmail.com");
+            clients.add(obj);
+            i++;
+        }
         return clients;
     }
 }

@@ -19,7 +19,7 @@ public class ClientController {
 
     @GetMapping("clients")
     public List<Client> getClients(){
-        String[] names = {"Luiz", "Maria", "José", "Stefanio", "Marcio", "Louiz", "Gustavo"};
+        String[] names = {"Luiz", "Maria", "José", "Stefanio", "Marcio", "Louiz", "Gustavo", "Matheus", };
 
         List<Client> clients = new ArrayList<Client>();
         int i = 0;

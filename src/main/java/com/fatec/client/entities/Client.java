@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 @Table(name = "TBL_CLIENT")
 public class Client implements Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(unique = true)

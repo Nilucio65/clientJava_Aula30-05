@@ -26,4 +26,19 @@ public class ClientService {
             () -> new EntityNotFoundException("Cliente não cadastrado!")
         );
     }
+
+    public void deleteById(int id) {
+      
+        Client client = getClientById(id);
+        clientRepository.delete(client);
+        }
+
+    public Client save(Client client) {
+        return clientRepository.save(client);
+    }
+
+    public void update(int id, Client client) {
+        getClientById(id);
+        clientRepository.save(client);
+    }
 }
